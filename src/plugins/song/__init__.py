@@ -1,8 +1,8 @@
-from .data_source import dataGet, dataProcess
+from nonebot import on_command
 from nonebot.adapters import Bot, Event
 from nonebot.typing import T_State
-from nonebot import on_command
 
+from .data_source import dataGet, dataProcess
 
 dataget = dataGet()
 
@@ -34,6 +34,3 @@ async def handle_songName(bot: Bot, event: Event, state: T_State):
         }
     ]
     await songpicker.send(songContent)
-
-
-

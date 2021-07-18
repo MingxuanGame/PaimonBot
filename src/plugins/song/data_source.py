@@ -26,8 +26,10 @@ class dataApi():
 
     async def getHotComments(self, songId: int):
         pass
+
     async def getSongInfo(self, songId: int):
         pass
+
 
 class dataGet(dataApi):
     '''
@@ -88,8 +90,8 @@ class dataProcess():
 
 class APINotWorkingException(Exception):
     def __init__(self, wrongData):
-        self.uniExceptionTip="网易云音乐接口返回了意料之外的数据：\n"
+        self.uniExceptionTip = "网易云音乐接口返回了意料之外的数据：\n"
         self.wrongData = wrongData
 
     def __str__(self):
-        return self.uniExceptionTip+self.wrongData
+        return self.uniExceptionTip + self.wrongData
